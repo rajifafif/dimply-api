@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/configurations', [ConfigurationController::class, 'index']);
-Route::get('/promos', [PromoController::class, 'index']);
+Route::post('/promos', [PromoController::class, 'index']);
