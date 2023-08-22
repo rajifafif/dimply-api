@@ -33,6 +33,11 @@ class File extends Model
 
     public function getFileUrlAttribute()
     {
-        return $this->path;
+        if (str_contains($this->path, 'http')) {
+            return $this->path;
+        } else {
+            $pathWithoutPublic = str_replace('public/', '', $this->path,);
+            return asset($pathWithoutPublic);
+        }
     }
 }
