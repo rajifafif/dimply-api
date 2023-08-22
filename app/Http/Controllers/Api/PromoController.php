@@ -26,7 +26,7 @@ class PromoController extends Controller
             ->when($request->sort_by != '', function($query) use ($request) {
                 $query->orderBy('percentage', 'asc');
             })
-            ->with(['tenant'])
+            ->with(['tenant', 'files', 'tenant.files'])
             ->paginate(5);
 
         return PromoResource::collection($promos)->response()->getData(true);

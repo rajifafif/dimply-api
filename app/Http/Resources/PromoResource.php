@@ -18,8 +18,10 @@ class PromoResource extends JsonResource
 
         $data = array_merge($data, [
             'tenant' => array_merge($this->tenant->toArray(), [
-                'distance_m' => 100
-            ])
+                'distance_m' => 100,
+                'banner_url' => $this->files->first()->file_url ?? ''
+            ]),
+            'banner_url' => $this->files->first()->file_url ?? ''
         ]);
 
         return $data;

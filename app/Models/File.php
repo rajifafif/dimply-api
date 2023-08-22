@@ -17,8 +17,22 @@ class File extends Model
         'path'
     ];
 
+    public $hidden = [
+        'created_at',
+        'updated_at',
+        'fileable_type',
+        'fileable_id',
+        'id',
+        // 'type'
+    ];
+
     public function fileable()
     {
         return $this->morphTo();
+    }
+
+    public function getFileUrlAttribute()
+    {
+        return $this->path;
     }
 }
