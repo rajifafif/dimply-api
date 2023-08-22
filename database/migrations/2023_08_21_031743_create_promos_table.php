@@ -18,8 +18,9 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->dateTime('start_at')->nullable();
             $table->dateTime('end_at')->nullable();
-            $table->decimal('original_price', 20, 10)->nullable();
             $table->string('type')->nullable();
+            $table->decimal('original_price', 20, 10)->nullable();
+            $table->decimal('discounted_price', 20, 10)->nullable();
             $table->decimal('min_amount', 20, 10)->nullable();
             $table->decimal('max_amount', 20, 10)->nullable();
             $table->decimal('percentage', 10, 7)->nullable();

@@ -16,6 +16,7 @@ class Promo extends Model
         'start_at',
         'end_at',
         'original_price',
+        'discounted_price',
         'type',
         'min_amount',
         'max_amount',

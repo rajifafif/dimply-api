@@ -100,6 +100,18 @@ class DummyDataSeeder extends Seeder
                 'slug' => 'sinarmas',
                 'name' => 'Bank Sinarmas'
             ],
+            [
+                'slug' => 'gopay',
+                'name' => 'GoPay'
+            ],
+            [
+                'slug' => 'mandiri',
+                'name' => 'Bank Mandiri'
+            ],
+            [
+                'slug' => 'mandiri-cc',
+                'name' => 'Mandiri Credit Card'
+            ],
         ];
 
         $payment_methods = [];
@@ -145,6 +157,257 @@ class DummyDataSeeder extends Seeder
                     ]
                 ]
             ],
+            [
+                'name' => 'Bagenciala',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fashion'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/bagenciala-summer-promo.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'Bagenciala All Clothes Summer Promo!',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        // 'original_price',
+                        'type' => 'discount',
+                        // 'min_amount',
+                        // 'max_amount',
+                        'percentage' => 30,
+                        'min_purchase_amount' => 1000000,
+                        // 'quota',
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/bagenciala-summer-promo.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'Tentaco BSD',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fnb'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/tentaco-11-ribu.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'PROMO 11.11 - DISKON 11 RIBU',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        'original_price' => 67000,
+                        'discounted_price' => 56000,
+                        'type' => 'fix-discount',
+                        // 'min_amount',
+                        // 'max_amount',
+                        // 'percentage' => 30,
+                        // 'min_purchase_amount' => 1000000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/bagenciala-summer-promo.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'Mac Dunaldu\'s',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fnb'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/mac-dunaldo-limited-offer.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'LIMITED OFFER 50% OFF SALE - Mac Dunaldu\'s',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        // 'original_price' => 399000,
+                        // 'discounted_price' => 299000,
+                        'type' => 'discount',
+                        // 'min_amount' => 100000,
+                        // 'max_amount',
+                        'percentage' => 50,
+                        'min_purchase_amount' => 100000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/mac-dunaldo-limited-offer.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'Blueberry Shop',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fashion'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/blueberry-special-sale.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'Blueberry Special Sale',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        'original_price' => 399000,
+                        'discounted_price' => 299000,
+                        'type' => 'fix-discount',
+                        // 'min_amount',
+                        // 'max_amount',
+                        // 'percentage' => 30,
+                        // 'min_purchase_amount' => 1000000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/blueberry-special-sale-299.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'DORI',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fashion'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/dori-clearance-summer.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'Clearance Sale Summer 2023 - DORI',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        // 'original_price' => 399000,
+                        // 'discounted_price' => 299000,
+                        'type' => 'discount',
+                        // 'min_amount',
+                        // 'max_amount',
+                        // 'percentage' => 30,
+                        'min_purchase_amount' => 1000000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/blueberry-special-sale-299.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'Taco Lover\'s',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fnb'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/taco-lovers-pass.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'Free Chicken Taco',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        // 'original_price' => 399000,
+                        // 'discounted_price' => 299000,
+                        'type' => 'buy-1-get-1',
+                        // 'min_amount',
+                        // 'max_amount',
+                        // 'percentage' => 30,
+                        // 'min_purchase_amount' => 1000000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/taco-lovers-pass.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ], 
+            ],
+            [
+                'name' => 'AGUCCIM',
+                'lat' => -6.3020833,
+                'lng' => 106.6511522,
+                'categories' => ['fashion'],
+                'files' => [
+                    [
+                        'type' => 'banner',
+                        'file_url' => 'public/promos/aguccim-65-promo.png'
+                    ]
+                    ],
+                'promos' => [
+                    [
+                        'name' => 'AGUCCIM 65% OFF',
+                        // 'description' => '',
+                        'start_at' => '2023-08-17',
+                        'end_at' => '2023-08-20',
+                        // 'original_price' => 399000,
+                        // 'discounted_price' => 299000,
+                        'type' => 'discount',
+                        // 'min_amount',
+                        // 'max_amount',
+                        'percentage' => 65,
+                        // 'min_purchase_amount' => 1000000,
+                        'quota' => 50,
+                        'tnc' => $faker->text,
+                        'files' => [
+                            [
+                                'type' => 'banner',
+                                'file_url' => 'public/promos/aguccim-65-promo.png'
+                            ]
+                        ],
+                        'payment_methods' => ['gopay', 'mandiri-cc', 'bca-cc']
+                    ]
+                ],
+            ],
         ];
 
         foreach ($tenants_data as $tenant_data) {
@@ -166,19 +429,23 @@ class DummyDataSeeder extends Seeder
             }
 
             foreach ($tenant_data['promos'] as $promo_data) {
-                $newPromo = $newTenant->promos()->create(collect($promo_data)->only(['name', 
-                'tenant_id',
-                'description',
-                'start_at',
-                'end_at',
-                'original_price',
-                'type',
-                'min_amount',
-                'max_amount',
-                'percentage',
-                'min_purchase_amount',
-                'quota',
-                'tnc'])->toArray());
+                $newPromo = $newTenant->promos()
+                ->create(collect($promo_data)
+                ->only([
+                    'name', 
+                    'tenant_id',
+                    'description',
+                    'start_at',
+                    'end_at',
+                    'original_price',
+                    'type',
+                    'min_amount',
+                    'max_amount',
+                    'percentage',
+                    'min_purchase_amount',
+                    'quota',
+                    'tnc'
+                ])->toArray());
 
                 // Tenant File
                 foreach ($promo_data['files'] as $promo_file_data) {
