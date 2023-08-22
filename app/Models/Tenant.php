@@ -15,6 +15,8 @@ class Tenant extends Model
         'lat',
         'lng',
     ];
+    
+    public $hidden = ['created_at', 'updated_at'];
 
     public function promos()
     {

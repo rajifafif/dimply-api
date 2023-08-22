@@ -15,4 +15,6 @@ class PaymentMethod extends Model
     ];
 
     public $visible = ['slug', 'name'];
+
+    public $hidden = ['created_at', 'updated_at'];
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PromoCollection;
+use App\Http\Resources\PromoResource;
 use App\Models\Promo;
 use Illuminate\Http\Request;
 
@@ -25,10 +27,8 @@ class PromoController extends Controller
                 $query->orderBy('percentage', 'asc');
             })
             ->with(['tenant'])
-            ->limit(5)
-            ->get();
+            ->paginate(5);
 
-
-        return response()->json($promos);
+        return PromoResource::collection($promos)->response()->getData(true);
     }
 }

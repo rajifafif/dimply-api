@@ -25,6 +25,12 @@ class Promo extends Model
         'tnc'
     ];
 
+    public $hidden = ['created_at', 'updated_at'];
+
+    public $casts = [
+        'percentage' => 'double'
+    ];
+
     public function tenant()
     {
         return $this->belongsTo(Tenant::class, 'tenant_id');

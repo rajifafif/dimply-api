@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ConfigurationController;
+use App\Http\Controllers\Api\MerchantController;
 use App\Http\Controllers\Api\PromoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/configurations', [ConfigurationController::class, 'index']);
 Route::post('/promos', [PromoController::class, 'index']);
+Route::post('/merchants', [MerchantController::class, 'index']);
